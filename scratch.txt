@@ -1,0 +1,16 @@
+user model
+
+-id
+0email
+-name
+-password
+
+-write out actual model for user
+-implement middleware to hash username password on register, and check hashed password
+-write middleware to check for user being logged in 
+-create ej templates for login and register 
+-create or db to hold user table
+-write the routes in our express server that will handle req.res to authentication/login, /register
+-write a model to connect my db to my express server
+
+const model = require(path.join(__dirname, file))(sequelize, Sequelize)
