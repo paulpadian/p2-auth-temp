@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router();
 const db = require('../models')
 //import middleware
-const flash = require('flash')
+const flash = require('connect-flash')
 const passport = require('../config/ppConfig')
 
 
@@ -68,7 +68,7 @@ router.post('/login', function(req, res, next) {
             req.flash('success', 'You are validated and logged in.');
             // if success save session and redirect user
             req.session.save(function() {
-                return res.redirect('/');
+                return res.redirect('/profile');
             });
         })
     })(req, res, next);
